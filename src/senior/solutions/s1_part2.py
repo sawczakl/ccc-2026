@@ -38,7 +38,8 @@ options = [overhop, babyhop]
 # Create flip-flop option
 options.append(min(options) + 2)
 
-# Sort and pick the T-th one (note: T is 1-based, so -1 to make it 0-based)
+# Sort and pick the T-th one
+# (Note: T is 1-based, so subtract 1 to make it 0-based as an index...)
 options.sort()
 n = options[T - 1]
 
