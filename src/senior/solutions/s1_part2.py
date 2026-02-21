@@ -6,7 +6,7 @@ T = int(input()) # nth-smallest number of hops sought (1 or 2)
 # OK, now let's return here and do the second-fewest ("runner-up").
 
 # First of all, we have an upper bound on the runner-up of optimal + 2.
-# This is because we can do -1 +1 ("flip-flop") followed by the optimal.
+# This is because we can do steps -1 +1 ("flip-flop") followed by the optimal.
 # So we only need to consider cases where the runner-up is optimal + 1.
 
 # This can only happen when:
