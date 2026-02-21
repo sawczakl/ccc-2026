@@ -40,7 +40,7 @@ D = D % K # The distance left after n giant hops
 
 # Should we overhop?
 if (K - D) < D:
-    n += 1 + (K - D) # the 1 extra is for the K hop itself
+    n += 1 + (K - D) # the 1 extra is for the +K hop itself
 
 # Otherwise, just do +1 till the target is reached
 else:    
