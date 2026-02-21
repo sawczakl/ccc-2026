@@ -33,12 +33,9 @@ overhop = n + 1 + (K - D)
 babyhop = n + D
 options = [overhop, babyhop]
 
-# Create flip-flop option
+# Create flip-flop option and sort
 options.append(min(options) + 2)
-
-# Sort and pick the T-th one
-# (Note: T is 1-based, so subtract 1 to make it 0-based as an index...)
 options.sort()
-n = options[T - 1]
 
-print(n)
+# Return the T-th solution (after fixing T so it's 0-indexed...)
+print(options[T - 1])
