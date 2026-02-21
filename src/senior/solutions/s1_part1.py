@@ -8,8 +8,8 @@ T = int(input()) # nth-smallest number of hops sought (1 or 2)
 
 # First, for simplicity, note that the question as stated could involve
 # hopping in either direction since B could be < A. However, we will just
-# track from 0 to D (distance) instead in order to avoid flipping signs
-# all the time. Given this...
+# track from 0 to D (positive distance) in order to avoid flipping signs.
+# Given this...
 
 # +K seems like intuitively the best, at least until it overshoots.
 # Presumably, our algorithm should start with +K until it would overshoot.
