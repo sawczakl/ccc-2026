@@ -9,11 +9,9 @@ T = int(input()) # nth-smallest number of hops sought (1 or 2)
 # This is because we can do -1 +1 ("flip-flop") followed by the optimal.
 # So we only need to consider cases where the runner-up is optimal + 1.
 
-# This could happen if:
-# (1) Optimal involves overhopping, but baby hops would have been
-#     only 1 more than optimal.
-# (2) Optimal does not involve overhopping, but overhopping would have been
-#     only 1 more than optimal.
+# This can only happen when:
+# (1) Overhop is optimal, but babyhop is only 1 more than optimal.
+# (2) Babyhop is optimal, but overhop is only 1 more than optimal.
 
 # Example cases:
 # D = 3. K = 4 | Babyhop 3. Overhop 2. Flip-flop 4 | Optimal: Overhop. Runner-up: Babyhop
