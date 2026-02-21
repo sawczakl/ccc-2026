@@ -16,14 +16,14 @@ T = int(input()) # nth-smallest number of hops sought (1 or 2)
 #     only 1 more than optimal.
 
 # Example cases:
-# D = 3. K = 4. Optimal (overhop) 2. Babyhop 3. Flip-flop 4. Runner-up: Babyhop.
-# D = 5. K = 6. Optimal (overhop) 2. Babyhop 5. Flip-flop 4. Runner-up: Flip-flop.
-# D = 3. K = 6. Optimal (babyhop) 3. Overhop 4. Flip-flop 5. Runner-up: Overhop.
-# D = 3. K = 8. Optimal (babyhop) 3. Overhop 6. Flip-flop 5. Runner-up: Flip-flop.
+# D = 3. K = 4 | Babyhop 3. Overhop 2. Flip-flop 4 | Optimal: Overhop. Runner-up: Babyhop
+# D = 5. K = 6 | Babyhop 5. Overhop 2. Flip-flop 4 | Optimal: Overhop. Runner-up: Flip-flop
+# D = 3. K = 6 | Babyhop 3. Overhop 4. Flip-flop 5 | Optimal: Babyhop. Runner-up: Overhop
+# D = 3. K = 8 | Babyhop 3. Overhop 6. Flip-flop 5 | Optimal: Babyhop. Runner-up: Flip-flop
 
 # It seems to me that the easiest way to do this is probably to get to our decision
-# point about overhop vs. baby; try both; add 2 to the optimal one; sort; and return
-# either the lowest or second-lowest depending on T.
+# point about overhop vs. babyhop; try both; add 2 to the optimal one; sort options;
+# and return either the lowest or second-lowest depending on T.
 
 # This part is the same -- approaching our decision point
 D = abs(B - A)
