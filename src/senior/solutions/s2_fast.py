@@ -33,8 +33,18 @@ for spot in spots[1:]:
 
 # prefix = prefix[1:]
 # Go through questions and print illumination status
+
+# This # trades off memory and speed
+# Smaller number = larger precomposed blocks (more memory)
+# Larger number = more print statements (slower)
+MOF = 10
+
 output = []
-for _ in range(Q):
+for n in range(Q):
+    if not (n % max(1, (Q // MOF))):
+        print('\n'.join(output) + '\n')
+        output = []
+
     spot = int(input())
     if prefix[spot]:
         output.append('Y')
