@@ -4,7 +4,7 @@ Q = int(input()) # number of spots to be questioned about
 
 # Reminder that spots are numbered from 1, not from 0
 # First spot is a dummy (spot 0 will never be asked about)
-spots = [0] * (N + 1)
+spots = [0] * (N + 2)
 
 # Read the lights
 for _ in range(L):
