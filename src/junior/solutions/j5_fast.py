@@ -20,7 +20,7 @@ for _ in range(L):
 
 # Make prefix sums
 prefix = [0]
-for spot in spots:
+for spot in spots[1:]:
     prefix.append(prefix[-1] + spot)
 
 # prefix = prefix[1:]
