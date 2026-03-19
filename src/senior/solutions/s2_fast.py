@@ -34,7 +34,7 @@ for spot in spots[1:]:
 # prefix = prefix[1:]
 # Go through questions and print illumination status
 
-# This # trades off memory and speed
+# This # ("memory optimization factor") trades off memory and speed
 # Smaller number = larger precomposed blocks (more memory)
 # Larger number = more print statements (slower)
 MOF = 10
